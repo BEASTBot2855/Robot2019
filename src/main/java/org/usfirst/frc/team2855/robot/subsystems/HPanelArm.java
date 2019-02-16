@@ -1,8 +1,11 @@
 package org.usfirst.frc.team2855.robot.subsystems;
 
+import com.ctre.phoenix.motorcontrol.ControlMode;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
+
 import org.usfirst.frc.team2855.robot.RobotMap;
 
-import edu.wpi.first.wpilibj.DoubleSolenoid;
+import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
@@ -13,22 +16,28 @@ public class HPanelArm extends Subsystem {
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
-	private final DoubleSolenoid armDoubleSolenoid = RobotMap.gearInOutSolenoid;
-	
+    private static WPI_TalonSRX hatchSpx = RobotMap.hatchSpx;
+    
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
+        hatchSpx.set(ControlMode.Position, 10.0);
     }
     
     public void HPanelUp() {
-    	armDoubleSolenoid.set(DoubleSolenoid.Value.kReverse);
+    	HPanelMove(1.0);
     }
+    
     public void HPanelDown() {
-    	armDoubleSolenoid.set(DoubleSolenoid.Value.kForward);
-    }
-    public void HatchArmNull() {
-    	armDoubleSolenoid.set(DoubleSolenoid.Value.kOff);
+        HPanelMove(-1.0);
     }
 
+    public void HPanelStop() {
+        HPanelMove(0.0);
+    }
+
+    private void HPanelMove(double value) {
+        hatchSpx.set(value);
+    }
 }
 

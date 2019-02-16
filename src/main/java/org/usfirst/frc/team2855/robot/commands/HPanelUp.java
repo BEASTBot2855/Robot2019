@@ -18,7 +18,7 @@ public class HPanelUp extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	SmartDashboard.putString("Panel Arm Status", "Retracted");
+    	SmartDashboard.putString("Panel Arm Status", "Retracting");
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -33,7 +33,7 @@ public class HPanelUp extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
-    	Robot.hPanelArm.HatchArmNull();
+    	Robot.hPanelArm.HPanelStop();
     }
 
     // Called when another command which requires one or more of the same

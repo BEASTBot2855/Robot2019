@@ -7,6 +7,7 @@
 
 package org.usfirst.frc.team2855.robot;
 
+import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.cameraserver.CameraServer;
@@ -38,7 +39,7 @@ public class RobotMap {
 	// public static int rangefinderPort = 1;
 	// public static int rangefinderModule = 1;
 	
-	// Drive train
+	// Drivetrain
 	public static WPI_TalonSRX driverightBottom;
 	public static WPI_TalonSRX driverightTop;
 	public static SpeedControllerGroup driveSpeedControllerGroupRight;
@@ -46,19 +47,6 @@ public class RobotMap {
 	public static WPI_TalonSRX driveleftBottom;
 	public static SpeedControllerGroup driveSpeedControllerGroupLeft;
 	public static DifferentialDrive driveDifferentialDrive1;
-	public static DoubleSolenoid shiftershift1;
-	// 2018 Arm
-	public static SpeedController intakeleftIntake;
-	public static Solenoid intakeleftSolenoid;
-	public static Solenoid intakerightSolenoid;
-	public static DoubleSolenoid intakeleftDoubleSolenoid;
-	public static DoubleSolenoid intakerightDoubleSolenoid;
-	// 2018 Elevator
-	public static Encoder elevatorelevatorencoder;
-	public static SpeedController elevatorwinch;
-	// 2017 Gear arm
-	public static DoubleSolenoid gearInOutSolenoid;
-  public static DoubleSolenoid gearPinchSolenoid;
 
 	// 2019 Ramp
 	public static Solenoid lRampSolenoid;
@@ -66,6 +54,9 @@ public class RobotMap {
 	public static WPI_TalonSRX lRampSrx;
 	public static WPI_TalonSRX rRampSrx;
 
+	// 2019 Hatch Panel
+	public static Solenoid hatchSolenoid;
+	public static WPI_TalonSRX hatchSpx;
 
 	// Misc.
 	public static Preferences preferences;
@@ -73,17 +64,8 @@ public class RobotMap {
 
 	
 	public static void init() {
-		intakeleftIntake = new Spark(1);
-		intakeleftSolenoid = new Solenoid(0, 2);
-		intakerightSolenoid = new Solenoid(0, 3);
-		intakeleftDoubleSolenoid = new DoubleSolenoid(0, 4, 5);
-		intakerightDoubleSolenoid = new DoubleSolenoid(0, 6, 7);
-		lRampSolenoid = new Solenoid(0, 0);
-		rRampSolenoid = new Solenoid(0, 1);
-
-		lRampSrx = new WPI_TalonSRX(6);
-		rRampSrx = new WPI_TalonSRX(5);
 		
+		// Drivetrain
 		driverightBottom = new WPI_TalonSRX(2);
 		driverightTop = new WPI_TalonSRX(1);
 		driveSpeedControllerGroupRight = new SpeedControllerGroup(driverightTop, new SpeedController[] {driverightBottom});
@@ -94,15 +76,17 @@ public class RobotMap {
 		driveDifferentialDrive1.setSafetyEnabled(true);
 		driveDifferentialDrive1.setExpiration(0.1);
 		driveDifferentialDrive1.setMaxOutput(1.0);
-		
-		shiftershift1 = new DoubleSolenoid(0, 0, 1);
-		
-		elevatorelevatorencoder = new Encoder(3, 2, false, EncodingType.k4X);
-		elevatorelevatorencoder.setDistancePerPulse(1.0);
-		elevatorelevatorencoder.setPIDSourceType(PIDSourceType.kRate);
-		elevatorwinch = new Spark(0);
-		elevatorwinch.setInverted(false);
-		
+	
+		// 2019 Ramp		
+		lRampSolenoid = new Solenoid(0, 0);
+		rRampSolenoid = new Solenoid(0, 1);
+		lRampSrx = new WPI_TalonSRX(6);
+		rRampSrx = new WPI_TalonSRX(5);
+
+		// 2019 Hatch Panel
+		hatchSolenoid = new Solenoid(2);
+		hatchSpx = new WPI_TalonSRX(7);
+
 		CameraServer.getInstance().startAutomaticCapture();
 		
 		preferences = Preferences.getInstance();
