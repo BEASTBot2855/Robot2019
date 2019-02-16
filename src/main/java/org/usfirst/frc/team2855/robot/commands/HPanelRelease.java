@@ -33,7 +33,7 @@ public class HPanelRelease extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
-    	Robot.hPanelGrabber.hatchGrabberNull();
+    	Robot.hPanelGrabber.hPanelGrab();
     }
 
     // Called when another command which requires one or more of the same

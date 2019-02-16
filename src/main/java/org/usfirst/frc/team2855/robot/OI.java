@@ -49,10 +49,34 @@ public class OI {
 	
 	public Joystick attack3 = new Joystick(0);
 	public Joystick extreme3dpro = new Joystick(1);
-	
 	public Joystick xbox = new Joystick(2);
 	
+	public JoystickButton rampUp;
+	public JoystickButton rampDown;
+	public JoystickButton panelUp;
+	public JoystickButton panelDown;
+	public JoystickButton panelGrab;
+	public JoystickButton panelRelease;
+
 	public OI() {
+
+		rampUp = new JoystickButton(extreme3dpro, 5);
+		rampUp.whileHeld(new RampUp());
+
+		rampDown = new JoystickButton(extreme3dpro, 4);
+		rampDown.whileHeld(new RampDown());
+
+		panelUp = new JoystickButton(extreme3dpro, 3);
+		panelUp.whileHeld(new HPanelUp());
+
+		panelDown = new JoystickButton(extreme3dpro, 2);
+		panelDown.whileHeld(new HPanelDown());
+
+		panelGrab = new JoystickButton(attack3, 3);
+		panelGrab.whileHeld(new HPanelGrab());
+
+		panelRelease = new JoystickButton(attack3, 2);
+		panelRelease.whileHeld(new HPanelRelease());
 
 	}
 	
