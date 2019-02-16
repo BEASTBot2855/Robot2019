@@ -18,7 +18,7 @@ public class HPanelGrab extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	SmartDashboard.putString("Gear Status", "Pinched");
+    	SmartDashboard.putString("Panel Status", "Grabbed");
     }
 
     // Called repeatedly when this Command is scheduled to run

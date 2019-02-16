@@ -18,7 +18,7 @@ public class HPanelRelease extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	SmartDashboard.putString("Gear Status", "Released");
+    	SmartDashboard.putString("Panel Status", "Released");
     }
 
     // Called repeatedly when this Command is scheduled to run

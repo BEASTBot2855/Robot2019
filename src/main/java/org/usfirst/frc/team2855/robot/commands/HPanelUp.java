@@ -18,7 +18,7 @@ public class HPanelUp extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	SmartDashboard.putString("Gear Arm Status", "Retracted");
+    	SmartDashboard.putString("Panel Arm Status", "Retracted");
     }
 
     // Called repeatedly when this Command is scheduled to run
