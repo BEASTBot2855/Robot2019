@@ -47,126 +47,13 @@ public class OI {
 	// button.whenReleased(new ExampleCommand());
 	
 	
-	public JoystickButton shiftSlowButton5;
-	public JoystickButton elevatorUpButton3;
-	public JoystickButton elevatorDownButton2;
-	public JoystickButton insertCubeButton1;
-	public JoystickButton shiftFastButton4;
 	public Joystick attack3 = new Joystick(0);
-	public JoystickButton shiftFastButton3;
-	public JoystickButton shiftSlowButton4;
-	public JoystickButton ejectCubeButton1;
-	public JoystickButton releaseCubeButton2;
 	public Joystick extreme3dpro = new Joystick(1);
-	public JoystickButton ejectCubeButtonR2;
-	public JoystickButton releaseCubeButtonR1;
-	public JoystickButton insertCubeButtonL2;
-	public JoystickButton releaseCubeButtonL1;
-	public JoystickButton elevatorUpButtonX;
-	public JoystickButton elevatorUpButtonY;
-	public JoystickButton elevatorDownButtonB;
-	public JoystickButton elevatorDownButtonA;
 	
 	public Joystick xbox = new Joystick(2);
 	
 	public OI() {
-		// elevatorDownButtonA = new JoystickButton(xbox, 2);
-		// // elevatorDownButtonA.whileHeld(new SetToSlow());
-		// elevatorDownButtonA.whileHeld(new HPanelDown());
-		
-		// elevatorDownButtonB = new JoystickButton(xbox, 3);
-		// // elevatorDownButtonB.whileHeld(new ElevatorDown());
-		// elevatorDownButtonB.whileHeld(new HPanelToggle());
-		
-		// elevatorUpButtonY = new JoystickButton(xbox, 4);
-		// // elevatorUpButtonY.whileHeld(new ElevatorUp());
-		// elevatorUpButtonY.whileHeld(new HPanelUp());
-		
-		// elevatorUpButtonX = new JoystickButton(xbox, 1);
-		// // elevatorUpButtonX.whileHeld(new SetToFast());
-		// elevatorUpButtonX.whileHeld(new HPanelToggle());
-		
-		// releaseCubeButtonL1 = new JoystickButton(xbox, 5);
-		// releaseCubeButtonL1.whileHeld(new ReleaseCube());
-		
-		// insertCubeButtonL2 = new JoystickButton(xbox, 7);
-		// insertCubeButtonL2.whileHeld(new InsertCube());
-		
-		// releaseCubeButtonR1 = new JoystickButton(xbox, 6);
-		// releaseCubeButtonR1.whileHeld(new ReleaseCube());
-		
-		// ejectCubeButtonR2 = new JoystickButton(xbox, 8);
-		// ejectCubeButtonR2.whileHeld(new EjectCube());
-		
-		
-		// releaseCubeButton2 = new JoystickButton(extreme3dpro, 2);
-		// releaseCubeButton2.whileHeld(new ReleaseCube());
-		
-		// ejectCubeButton1 = new JoystickButton(extreme3dpro, 1);
-		// ejectCubeButton1.whileHeld(new EjectCube());
-		
-		// shiftSlowButton4 = new JoystickButton(extreme3dpro, 4);
-		// shiftSlowButton4.whenPressed(new SetToSlow());
-		
-		// shiftFastButton3 = new JoystickButton(extreme3dpro, 3);
-		// shiftFastButton3.whenPressed(new SetToFast());
-		
-		
-		// shiftFastButton4 = new JoystickButton(attack3, 4);
-		// shiftFastButton4.whenPressed(new SetToFast());
-		
-		// insertCubeButton1 = new JoystickButton(attack3, 1);
-		// insertCubeButton1.whileHeld(new InsertCube());
-		
-		// elevatorDownButton2 = new JoystickButton(attack3, 2);
-		// elevatorDownButton2.whileHeld(new ElevatorDown());
-		
-		// elevatorUpButton3 = new JoystickButton(attack3, 3);
-		// elevatorUpButton3.whileHeld(new ElevatorUp());
-		
-		// shiftSlowButton5 = new JoystickButton(attack3, 5);
-		// shiftSlowButton5.whenPressed(new SetToSlow());
-		
-		
-		// SmartDashboard.putData("Auto Middle", new AutoMiddle());
-		// SmartDashboard.putData("Auto Left Scale", new AutoLeftScale());
-		// SmartDashboard.putData("Auto Right Scale", new AutoRightScale());
-		// SmartDashboard.putData("Auto Left", new AutoLeft());
-		// SmartDashboard.putData("Auto Right", new AutoRight());
-		// SmartDashboard.putData("Middle Arrangement Check", new MiddleArrangementCheck());
-		// SmartDashboard.putData("Left Arrangement Check Scale", new LeftArrangementCheckScale());
-		// SmartDashboard.putData("Right Arrangement Check Scale", new RightArrangementCheckScale());
-		// SmartDashboard.putData("Left Arrangement Check", new LeftArrangementCheck());
-		// SmartDashboard.putData("Right Arrangement Check", new RightArrangementCheck());
-		// SmartDashboard.putData("CommandGroupSwitchLeft", new CommandGroupSwitchLeft());
-		// SmartDashboard.putData("CommandGroupSwitchRight", new CommandGroupSwitchRight());
-		// SmartDashboard.putData("ShouldWeScaleLeft", new ShouldWeScaleLeft());
-		// SmartDashboard.putData("ShouldWeScaleRight", new ShouldWeScaleRight());
-		// SmartDashboard.putData("Switch Middle Left", new SwitchMiddleLeft());
-		// SmartDashboard.putData("Switch Middle Right", new SwitchMiddleRight());
-		// SmartDashboard.putData("CommandGroupScaleLeft", new CommandGroupScaleLeft());
-		// SmartDashboard.putData("CommandGroupScaleRight", new CommandGroupScaleRight());
-		// SmartDashboard.putData("Auto Forward: Auto Line", new AutoForward(1.0));
-		// SmartDashboard.putData("Auto Forward: toScale", new AutoForward(0.0));
-		// SmartDashboard.putData("AutoTurnLeft: towardSwitch", new AutoTurnLeft(0.0));
-		// SmartDashboard.putData("AutoTurnRight: towardSwitch", new AutoTurnRight(0.0));
-		// SmartDashboard.putData("ScaleElevatorLift", new ScaleElevatorLift());
-		// SmartDashboard.putData("ScaleForwardAfterRight", new ScaleForwardAfterRight());
-		// SmartDashboard.putData("Drive Robot", new DriveRobot());
-		// SmartDashboard.putData("Conditional Command 1", new ConditionalCommand1());
-		// SmartDashboard.putData("ShiftGearboxes", new ShiftGearboxes());
-		// SmartDashboard.putData("SetToSlow", new SetToSlow());
-		// SmartDashboard.putData("SetToFast", new SetToFast());
-		// SmartDashboard.putData("SetToOff", new SetToOff());
-		// SmartDashboard.putData("ElevatorDown", new ElevatorDown());
-		// SmartDashboard.putData("ElevatorUp", new ElevatorUp());
-		// SmartDashboard.putData("InsertCube", new InsertCube());
-		// SmartDashboard.putData("EjectCube", new EjectCube());
-		// SmartDashboard.putData("ReleaseCube", new ReleaseCube());
-		// SmartDashboard.putData("GrabCube", new GrabCube());
-		// SmartDashboard.putData("LRL Forward Switch: Drive to Switch", new LRLForwardSwitch(1.0));
-		// SmartDashboard.putData("AutoElevatorUp: dropHeight", new AutoElevatorUp(1.0));
-		// SmartDashboard.putData("dontDrive", new DontDrive());
+
 	}
 	
 	public Joystick getattack3() {return attack3;}
