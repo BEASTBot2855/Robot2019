@@ -28,13 +28,9 @@ public class Robot extends TimedRobot {
 
 	Command autonomousCommand;
 	public static OI oi;
-	public static Intake intake;
-	public static IntakeMotor intakeMotor;
 	public static Drive drive;
-	public static Shifter shifter;
-	public static Elevator elevator;
 	public static HPanelArm hPanelArm;
-  public static HPanelGrabber hPanelGrabber;
+	public static HPanelGrabber hPanelGrabber;
 	public static UsbCamera usbcam;
 	
 	SendableChooser<Command> m_chooser = new SendableChooser<>();
@@ -49,26 +45,11 @@ public class Robot extends TimedRobot {
 	@Override
 	public void robotInit() {
 		RobotMap.init();
-		intake = new Intake();
-		intakeMotor = new IntakeMotor();
 		drive = new Drive();
-		shifter = new Shifter();
-		elevator = new Elevator();
 		hPanelArm = new HPanelArm();
 		hPanelGrabber = new HPanelGrabber();
 		UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
 		oi = new OI();
-
-
-		m_chooser.setDefaultOption("Auto Middle", new AutoMiddle());
-		m_chooser.addOption("Auto Left", new AutoLeft());
-		m_chooser.addOption("Auto Right", new AutoRight());
-		m_chooser.addOption("Auto Scale Left", new AutoLeftScale());
-		m_chooser.addOption("Auto Scale Right", new AutoRightScale());
-		m_chooser.addOption("Auto Scale Preset Left", new CommandGroupScaleLeft());
-		m_chooser.addOption("Auto Scale Preset Right", new CommandGroupScaleRight());
-		m_chooser.addOption("Auto Switch Left", new CommandGroupSwitchLeft());
-		m_chooser.addOption("Auto Switch Right", new CommandGroupSwitchRight());
 	}
 
 	/**

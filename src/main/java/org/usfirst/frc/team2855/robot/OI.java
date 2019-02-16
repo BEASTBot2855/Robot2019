@@ -70,62 +70,62 @@ public class OI {
 	public Joystick xbox = new Joystick(2);
 	
 	public OI() {
-		elevatorDownButtonA = new JoystickButton(xbox, 2);
-		// elevatorDownButtonA.whileHeld(new SetToSlow());
-		elevatorDownButtonA.whileHeld(new HPanelDown());
+		// elevatorDownButtonA = new JoystickButton(xbox, 2);
+		// // elevatorDownButtonA.whileHeld(new SetToSlow());
+		// elevatorDownButtonA.whileHeld(new HPanelDown());
 		
-		elevatorDownButtonB = new JoystickButton(xbox, 3);
-		// elevatorDownButtonB.whileHeld(new ElevatorDown());
-		elevatorDownButtonB.whileHeld(new HPanelToggle());
+		// elevatorDownButtonB = new JoystickButton(xbox, 3);
+		// // elevatorDownButtonB.whileHeld(new ElevatorDown());
+		// elevatorDownButtonB.whileHeld(new HPanelToggle());
 		
-		elevatorUpButtonY = new JoystickButton(xbox, 4);
-		// elevatorUpButtonY.whileHeld(new ElevatorUp());
-		elevatorUpButtonY.whileHeld(new HPanelUp());
+		// elevatorUpButtonY = new JoystickButton(xbox, 4);
+		// // elevatorUpButtonY.whileHeld(new ElevatorUp());
+		// elevatorUpButtonY.whileHeld(new HPanelUp());
 		
-		elevatorUpButtonX = new JoystickButton(xbox, 1);
-		// elevatorUpButtonX.whileHeld(new SetToFast());
-		elevatorUpButtonX.whileHeld(new HPanelToggle());
+		// elevatorUpButtonX = new JoystickButton(xbox, 1);
+		// // elevatorUpButtonX.whileHeld(new SetToFast());
+		// elevatorUpButtonX.whileHeld(new HPanelToggle());
 		
-		releaseCubeButtonL1 = new JoystickButton(xbox, 5);
-		releaseCubeButtonL1.whileHeld(new ReleaseCube());
+		// releaseCubeButtonL1 = new JoystickButton(xbox, 5);
+		// releaseCubeButtonL1.whileHeld(new ReleaseCube());
 		
-		insertCubeButtonL2 = new JoystickButton(xbox, 7);
-		insertCubeButtonL2.whileHeld(new InsertCube());
+		// insertCubeButtonL2 = new JoystickButton(xbox, 7);
+		// insertCubeButtonL2.whileHeld(new InsertCube());
 		
-		releaseCubeButtonR1 = new JoystickButton(xbox, 6);
-		releaseCubeButtonR1.whileHeld(new ReleaseCube());
+		// releaseCubeButtonR1 = new JoystickButton(xbox, 6);
+		// releaseCubeButtonR1.whileHeld(new ReleaseCube());
 		
-		ejectCubeButtonR2 = new JoystickButton(xbox, 8);
-		ejectCubeButtonR2.whileHeld(new EjectCube());
-		
-		
-		releaseCubeButton2 = new JoystickButton(extreme3dpro, 2);
-		releaseCubeButton2.whileHeld(new ReleaseCube());
-		
-		ejectCubeButton1 = new JoystickButton(extreme3dpro, 1);
-		ejectCubeButton1.whileHeld(new EjectCube());
-		
-		shiftSlowButton4 = new JoystickButton(extreme3dpro, 4);
-		shiftSlowButton4.whenPressed(new SetToSlow());
-		
-		shiftFastButton3 = new JoystickButton(extreme3dpro, 3);
-		shiftFastButton3.whenPressed(new SetToFast());
+		// ejectCubeButtonR2 = new JoystickButton(xbox, 8);
+		// ejectCubeButtonR2.whileHeld(new EjectCube());
 		
 		
-		shiftFastButton4 = new JoystickButton(attack3, 4);
-		shiftFastButton4.whenPressed(new SetToFast());
+		// releaseCubeButton2 = new JoystickButton(extreme3dpro, 2);
+		// releaseCubeButton2.whileHeld(new ReleaseCube());
 		
-		insertCubeButton1 = new JoystickButton(attack3, 1);
-		insertCubeButton1.whileHeld(new InsertCube());
+		// ejectCubeButton1 = new JoystickButton(extreme3dpro, 1);
+		// ejectCubeButton1.whileHeld(new EjectCube());
 		
-		elevatorDownButton2 = new JoystickButton(attack3, 2);
-		elevatorDownButton2.whileHeld(new ElevatorDown());
+		// shiftSlowButton4 = new JoystickButton(extreme3dpro, 4);
+		// shiftSlowButton4.whenPressed(new SetToSlow());
 		
-		elevatorUpButton3 = new JoystickButton(attack3, 3);
-		elevatorUpButton3.whileHeld(new ElevatorUp());
+		// shiftFastButton3 = new JoystickButton(extreme3dpro, 3);
+		// shiftFastButton3.whenPressed(new SetToFast());
 		
-		shiftSlowButton5 = new JoystickButton(attack3, 5);
-		shiftSlowButton5.whenPressed(new SetToSlow());
+		
+		// shiftFastButton4 = new JoystickButton(attack3, 4);
+		// shiftFastButton4.whenPressed(new SetToFast());
+		
+		// insertCubeButton1 = new JoystickButton(attack3, 1);
+		// insertCubeButton1.whileHeld(new InsertCube());
+		
+		// elevatorDownButton2 = new JoystickButton(attack3, 2);
+		// elevatorDownButton2.whileHeld(new ElevatorDown());
+		
+		// elevatorUpButton3 = new JoystickButton(attack3, 3);
+		// elevatorUpButton3.whileHeld(new ElevatorUp());
+		
+		// shiftSlowButton5 = new JoystickButton(attack3, 5);
+		// shiftSlowButton5.whenPressed(new SetToSlow());
 		
 		
 		// SmartDashboard.putData("Auto Middle", new AutoMiddle());
