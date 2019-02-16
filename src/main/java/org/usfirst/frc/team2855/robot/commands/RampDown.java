@@ -8,9 +8,9 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 /**
  * Raises the ramp.
  */
-public class RampUp extends Command {
+public class RampDown extends Command {
 
-    public RampUp() {
+    public RampDown() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     	requires(Robot.ramp);
@@ -22,7 +22,7 @@ public class RampUp extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-        Robot.ramp.moveRamp(true);
+        Robot.ramp.moveRamp(false);
     }
 
     // Make this return true when this Command no longer needs to run execute()
