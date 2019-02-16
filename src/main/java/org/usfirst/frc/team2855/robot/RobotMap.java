@@ -59,6 +59,14 @@ public class RobotMap {
 	// 2017 Gear arm
 	public static DoubleSolenoid gearInOutSolenoid;
   public static DoubleSolenoid gearPinchSolenoid;
+
+	// 2019 Ramp
+	public static Solenoid lRampSolenoid;
+	public static Solenoid rRampSolenoid;
+	public static WPI_TalonSRX lRampSrx;
+	public static WPI_TalonSRX rRampSrx;
+
+
 	// Misc.
 	public static Preferences preferences;
 	public static CameraServer camera;
@@ -70,6 +78,11 @@ public class RobotMap {
 		intakerightSolenoid = new Solenoid(0, 3);
 		intakeleftDoubleSolenoid = new DoubleSolenoid(0, 4, 5);
 		intakerightDoubleSolenoid = new DoubleSolenoid(0, 6, 7);
+		lRampSolenoid = new Solenoid(0, 0);
+		rRampSolenoid = new Solenoid(0, 1);
+
+		lRampSrx = new WPI_TalonSRX(6);
+		rRampSrx = new WPI_TalonSRX(5);
 		
 		driverightBottom = new WPI_TalonSRX(2);
 		driverightTop = new WPI_TalonSRX(1);

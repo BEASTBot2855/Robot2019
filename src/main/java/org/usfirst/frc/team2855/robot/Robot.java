@@ -31,6 +31,7 @@ public class Robot extends TimedRobot {
 	public static Drive drive;
 	public static HPanelArm hPanelArm;
 	public static HPanelGrabber hPanelGrabber;
+	public static Ramp ramp;
 	public static UsbCamera usbcam;
 	
 	SendableChooser<Command> m_chooser = new SendableChooser<>();
@@ -48,6 +49,7 @@ public class Robot extends TimedRobot {
 		drive = new Drive();
 		hPanelArm = new HPanelArm();
 		hPanelGrabber = new HPanelGrabber();
+		ramp = new Ramp();
 		UsbCamera camera = CameraServer.getInstance().startAutomaticCapture();
 		oi = new OI();
 	}
