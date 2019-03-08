@@ -6,6 +6,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import org.usfirst.frc.team2855.robot.RobotMap;
 
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
@@ -18,6 +19,8 @@ public class HPanelArm extends Subsystem {
     // here. Call these from Commands.
 
     private static WPI_TalonSRX hatchSpx = RobotMap.hatchSpx;
+    private static DigitalInput hatchLimitSwitch0 = RobotMap.hatchLimitSwitch0;
+    private static DigitalInput hatchLimitSwitch1 = RobotMap.hatchLimitSwitch1;
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
@@ -49,11 +52,17 @@ public class HPanelArm extends Subsystem {
     }
 
     public void HPanelUp() {
-        HPanelMove(1.0);
+        if(hatchLimitSwitch0.get())
+            HPanelMove(-.5);
+        else
+            HPanelStop();
     }
 
     public void HPanelDown() {
-        HPanelMove(-1.0);
+        if(hatchLimitSwitch1.get())
+            HPanelMove(.5);
+        else
+            HPanelStop();
     }
 
     public void HPanelStop() {

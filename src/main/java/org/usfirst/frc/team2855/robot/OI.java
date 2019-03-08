@@ -60,24 +60,40 @@ public class OI {
 
 	public OI() {
 
-		rampUp = new JoystickButton(extreme3dpro, 5);
+		// extreme3dpro
+		rampUp = new JoystickButton(extreme3dpro, 6);
 		rampUp.whileHeld(new RampUp());
 
 		rampDown = new JoystickButton(extreme3dpro, 4);
 		rampDown.whileHeld(new RampDown());
 
-		panelUp = new JoystickButton(extreme3dpro, 3);
+		panelUp = new JoystickButton(extreme3dpro, 5);
 		panelUp.whileHeld(new HPanelUp());
 
-		panelDown = new JoystickButton(extreme3dpro, 2);
+		panelDown = new JoystickButton(extreme3dpro, 3);
 		panelDown.whileHeld(new HPanelDown());
 
-		panelGrab = new JoystickButton(attack3, 3);
-		panelGrab.whileHeld(new HPanelGrab());
-
-		panelRelease = new JoystickButton(attack3, 2);
+		panelRelease = new JoystickButton(extreme3dpro, 1);
 		panelRelease.whileHeld(new HPanelRelease());
 
+		// panelGrab = new JoystickButton(attack3, 3);
+		// panelGrab.whileHeld(new HPanelGrab());
+
+		// attack3
+		rampUp = new JoystickButton(attack3, 4);
+		rampUp.whileHeld(new RampUp());
+
+		rampDown = new JoystickButton(attack3, 5);
+		rampDown.whileHeld(new RampDown());
+
+		panelUp = new JoystickButton(attack3, 3);
+		panelUp.whileHeld(new HPanelUp());
+
+		panelDown = new JoystickButton(attack3, 2);
+		panelDown.whileHeld(new HPanelDown());
+		
+		panelRelease = new JoystickButton(attack3, 1);
+		panelRelease.whileHeld(new HPanelRelease());
 	}
 	
 	public Joystick getattack3() {return attack3;}

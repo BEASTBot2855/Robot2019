@@ -5,6 +5,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.Timer;
 
 public class Ramp extends Subsystem {
 
@@ -26,24 +27,26 @@ public class Ramp extends Subsystem {
 	public void periodic() {
 	}
 
-	public void moveRamp(boolean upDown) {
+	public void moveRamp(boolean moveUp) {
 		lRampSolenoid.set(true);
 		rRampSolenoid.set(true);
-		if (upDown) {
-			lRampSrx.set(1.0);
-			rRampSrx.set(1.0);
+		Timer.delay(.5);
+		if (moveUp) {
+			lRampSrx.set(-.5);
+			rRampSrx.set(.5);
 		} else {
-			lRampSrx.set(-1.0);
-			rRampSrx.set(-1.0);
+			lRampSrx.set(.25);
+			rRampSrx.set(-.25);
 		}
 
 	}
 
 	public void stopRamp() {
-		lRampSolenoid.set(false);
-		rRampSolenoid.set(false);
 		lRampSrx.set(0);
 		rRampSrx.set(0);
+		Timer.delay(.5);
+		lRampSolenoid.set(false);
+		rRampSolenoid.set(false);
 
 	}
 

@@ -12,6 +12,7 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.cameraserver.CameraServer;
 import edu.wpi.first.wpilibj.CounterBase.EncodingType;
+import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Encoder;
 import edu.wpi.first.wpilibj.PIDSourceType;
@@ -57,6 +58,8 @@ public class RobotMap {
 	// 2019 Hatch Panel
 	public static Solenoid hatchSolenoid;
 	public static WPI_TalonSRX hatchSpx;
+	public static DigitalInput hatchLimitSwitch0;
+	public static DigitalInput hatchLimitSwitch1;
 
 	// Misc.
 	public static Preferences preferences;
@@ -84,8 +87,10 @@ public class RobotMap {
 		rRampSrx = new WPI_TalonSRX(5);
 
 		// 2019 Hatch Panel
-		hatchSolenoid = new Solenoid(2);
+		hatchSolenoid = new Solenoid(7);
 		hatchSpx = new WPI_TalonSRX(7);
+		hatchLimitSwitch0 = new DigitalInput(0);
+		hatchLimitSwitch1 = new DigitalInput(1);
 
 		CameraServer.getInstance().startAutomaticCapture();
 		

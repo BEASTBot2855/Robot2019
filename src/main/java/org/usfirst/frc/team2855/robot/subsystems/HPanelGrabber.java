@@ -20,11 +20,11 @@ public class HPanelGrabber extends Subsystem {
     }
     
     public void hPanelGrab() {
-    	hatchSolenoid.set(true);
+    	hatchSolenoid.set(false);
     }
     
     public void hPanelRelease() {
-    	hatchSolenoid.set(false);
+    	hatchSolenoid.set(true);
     }
     
 }

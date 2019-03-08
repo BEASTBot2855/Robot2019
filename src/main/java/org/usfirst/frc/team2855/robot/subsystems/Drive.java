@@ -34,7 +34,7 @@ public class Drive extends Subsystem {
 	public void periodic() {}
 	
 	public void driveRobot(double leftSpeed, double rightSpeed) {
-		differentialDrive1.tankDrive(-leftSpeed, -rightSpeed, false);
+		differentialDrive1.tankDrive(leftSpeed, rightSpeed, false);
 	}
 	
 }
