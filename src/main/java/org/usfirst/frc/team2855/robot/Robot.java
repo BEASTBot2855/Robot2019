@@ -9,14 +9,10 @@ package org.usfirst.frc.team2855.robot;
 
 import edu.wpi.cscore.UsbCamera;
 import edu.wpi.first.cameraserver.CameraServer;
-import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
-import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import edu.wpi.first.wpilibj.shuffleboard.Shuffleboard;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team2855.robot.commands.*;
 import org.usfirst.frc.team2855.robot.subsystems.*;
@@ -128,11 +124,6 @@ public class Robot extends TimedRobot {
 		Scheduler.getInstance().run();
 
 		Test1.testLimitSwitch();
-
-		// if(hatchLimitSwitch0.get())
-		// 	System.out.println("hatchLimitSwitch0");
-		// if(hatchLimitSwitch1.get())
-		// 	System.out.println("hatchLimitSwitch1");
 	}
 
 	/**

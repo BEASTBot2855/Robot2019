@@ -57,6 +57,10 @@ public class OI {
 	public JoystickButton panelDown;
 	public JoystickButton panelGrab;
 	public JoystickButton panelRelease;
+	
+	public JoystickButton armOut;
+	public JoystickButton armUp;
+	public JoystickButton armIn;
 
 	public OI() {
 
@@ -94,6 +98,17 @@ public class OI {
 		
 		panelRelease = new JoystickButton(attack3, 1);
 		panelRelease.whileHeld(new HPanelRelease());
+
+		// xbox
+
+		armIn = new JoystickButton(xbox, 2);
+		armIn.whenPressed(new ArmIn());
+
+		armUp = new JoystickButton(xbox, 1);
+		armUp.whenPressed(new ArmUp());
+
+		armOut = new JoystickButton(xbox, 4);
+		armOut.whenPressed(new ArmOut());
 	}
 	
 	public Joystick getattack3() {return attack3;}

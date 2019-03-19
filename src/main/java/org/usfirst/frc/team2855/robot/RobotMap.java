@@ -60,6 +60,7 @@ public class RobotMap {
 	public static WPI_TalonSRX hatchSpx;
 	public static DigitalInput hatchLimitSwitch0;
 	public static DigitalInput hatchLimitSwitch1;
+	public static DigitalInput hatchLightSwitch;
 
 	// Misc.
 	public static Preferences preferences;
@@ -91,6 +92,7 @@ public class RobotMap {
 		hatchSpx = new WPI_TalonSRX(7);
 		hatchLimitSwitch0 = new DigitalInput(0);
 		hatchLimitSwitch1 = new DigitalInput(1);
+		hatchLightSwitch = new DigitalInput(2);
 
 		CameraServer.getInstance().startAutomaticCapture();
 		

@@ -21,6 +21,7 @@ public class HPanelArm extends Subsystem {
     private static WPI_TalonSRX hatchSpx = RobotMap.hatchSpx;
     private static DigitalInput hatchLimitSwitch0 = RobotMap.hatchLimitSwitch0;
     private static DigitalInput hatchLimitSwitch1 = RobotMap.hatchLimitSwitch1;
+    public static boolean wasLastIn;
 
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
@@ -64,6 +65,30 @@ public class HPanelArm extends Subsystem {
         else
             HPanelStop();
     }
+
+    // public void ArmIn() {
+    //     while(hatchLimitSwitch0.get())
+    //         HPanelMove(-.5);
+    //     HPanelStop();
+    // }
+
+    // public void ArmUp() {
+    //     if(wasLastIn) {
+    //         while(hatchLightSwitch.get())
+    //             HPanelMove(.5);
+    //         HPanelStop();
+    //     } else {
+    //         while(hatchLightSwitch.get())
+    //             HPanelMove(-.5);
+    //         HPanelStop();
+    //     }
+    // }
+
+    // public void ArmOut() {
+    //     while(hatchLimitSwitch1.get())
+    //         HPanelMove(.5);
+    //     HPanelStop();
+    // }
 
     public void HPanelStop() {
         HPanelMove(0.0);
